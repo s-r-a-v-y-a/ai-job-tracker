@@ -4,10 +4,10 @@ A full-stack web application that helps you track job applications
 while using AI to analyze resumes, generate cover letters, 
 and provide personalized job insights.
 
-## 🚀 Live Demo
+## Live Demo
 Coming soon...
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** Next.js, React, Tailwind CSS
 - **Backend:** Node.js, Express.js
 - **Database:** PostgreSQL, Prisma ORM
@@ -15,7 +15,7 @@ Coming soon...
 - **Auth:** JWT (JSON Web Tokens)
 - **Deployment:** Vercel, Railway
 
-## ✅ Features (in progress)
+## Features (in progress)
 - [x] User registration and login
 - [x] JWT authentication
 - [x] Job application CRUD (create, read, update, delete)
@@ -25,14 +25,14 @@ Coming soon...
 - [ ] Interview prep
 - [ ] Analytics dashboard
 
-## 📁 Project Structure
+## Project Structure
 ai-job-tracker/
 backend/        → Node.js + Express API
 routes/       → auth and jobs endpoints
 middleware/   → JWT authentication
 lib/          → Prisma database client
 prisma/       → database schema and migrations
-## 🏃 How to Run Locally
+## How to Run Locally
 
 ### Backend
 ```bash
@@ -52,7 +52,7 @@ Server runs on http://localhost:3001
 | PATCH | /api/jobs/:id | Update a job |
 | DELETE | /api/jobs/:id | Delete a job |
 
-## 📈 Build Progress
+## Build Progress
 - [x] Phase 1 — Setup & Foundations
 - [x] Phase 2 — Backend API & Database
 - [ ] Phase 3 — Frontend React Dashboard
@@ -62,5 +62,5 @@ Server runs on http://localhost:3001
 - [ ] Phase 7 — Bonus Features
 - [ ] Phase 8 — Deploy & Polish
 
-## 👩‍💻 Author
+## Author
 Sravya 
