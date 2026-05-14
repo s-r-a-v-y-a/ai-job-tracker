@@ -6,6 +6,8 @@ const authRoutes = require('./routes/auth');
 const jobRoutes = require('./routes/jobs');
 const auth = require('./middleware/auth');
 const aiRoutes = require('./routes/ai');
+const searchRoutes = require('./routes/search');
+const adminRoutes = require('./routes/admin');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,6 +23,8 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/jobs', auth, jobRoutes);
 app.use('/api/ai', auth, aiRoutes);
+app.use('/api/search', auth, searchRoutes);
+app.use('/api/admin', auth, adminRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
