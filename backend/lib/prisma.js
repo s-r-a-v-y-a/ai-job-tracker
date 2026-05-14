@@ -3,7 +3,7 @@ const { PrismaPg } = require('@prisma/adapter-pg');
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  connectionString: 'postgresql://sravyagorinta@localhost:5432/aijobtracker',
+  connectionString: process.env.DATABASE_URL || 'postgresql://sravyagorinta@localhost:5432/aijobtracker',
 });
 
 const adapter = new PrismaPg(pool);
