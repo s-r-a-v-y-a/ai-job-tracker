@@ -16,7 +16,7 @@ export default function SearchPage() {
     try {
       const token = localStorage.getItem('token');
       const res = await fetch(
-        `http://localhost:3001/api/search?q=${encodeURIComponent(query)}&location=${encodeURIComponent(location)}`,
+        `https://ai-job-tracker-production-fd21.up.railway.app/api/search?q=${encodeURIComponent(query)}&location=${encodeURIComponent(location)}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const data = await res.json();
@@ -31,7 +31,7 @@ export default function SearchPage() {
   const saveJob = async (job: any) => {
     try {
       const token = localStorage.getItem('token');
-      await fetch('http://localhost:3001/api/jobs', {
+      await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/jobs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

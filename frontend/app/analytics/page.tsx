@@ -20,7 +20,7 @@ export default function AnalyticsPage() {
   const fetchAnalytics = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:3001/api/jobs/analytics', {
+      const res = await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/jobs/analytics', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const json = await res.json();

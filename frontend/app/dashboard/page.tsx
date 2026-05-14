@@ -24,7 +24,7 @@ export default function DashboardPage() {
   const fetchJobs = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:3001/api/jobs', {
+      const res = await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/jobs', {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -39,7 +39,7 @@ export default function DashboardPage() {
   const addJob = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:3001/api/jobs', {
+      const res = await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/jobs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export default function DashboardPage() {
   const deleteJob = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await fetch(`http://localhost:3001/api/jobs/${id}`, {
+      await fetch(`https://ai-job-tracker-production-fd21.up.railway.app/api/jobs/${id}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });

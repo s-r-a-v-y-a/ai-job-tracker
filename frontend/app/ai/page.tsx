@@ -36,7 +36,7 @@ export default function AIPage() {
   const scoreResume = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3001/api/ai/score-resume', {
+      const res = await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/ai/score-resume', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token()}` },
         body: JSON.stringify({ resumeText }),
@@ -50,7 +50,7 @@ export default function AIPage() {
   const generateCoverLetter = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3001/api/ai/cover-letter', {
+      const res = await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/ai/cover-letter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token()}` },
         body: JSON.stringify({ resumeText: coverResume, jobTitle, company, jobDescription: jobDesc }),
@@ -64,7 +64,7 @@ export default function AIPage() {
   const generateInterviewPrep = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3001/api/ai/interview-prep', {
+      const res = await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/ai/interview-prep', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token()}` },
         body: JSON.stringify({ jobTitle: interviewTitle, jobDescription: interviewDesc }),
@@ -78,7 +78,7 @@ export default function AIPage() {
   const matchResumeFn = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:3001/api/ai/match', {
+      const res = await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/ai/match', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token()}` },
         body: JSON.stringify({ resumeText: matchResume, jobDescription: matchJob }),

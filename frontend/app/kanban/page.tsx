@@ -43,7 +43,7 @@ export default function KanbanPage() {
   const fetchJobs = async () => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:3001/api/jobs', {
+      const res = await fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/jobs', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -71,7 +71,7 @@ export default function KanbanPage() {
 
     try {
       const token = localStorage.getItem('token');
-      await fetch(`http://localhost:3001/api/jobs/${jobId}`, {
+      await fetch(`https://ai-job-tracker-production-fd21.up.railway.app/api/jobs/${jobId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

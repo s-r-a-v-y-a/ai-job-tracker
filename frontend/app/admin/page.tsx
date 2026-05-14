@@ -21,8 +21,8 @@ export default function AdminPage() {
       const headers = { Authorization: `Bearer ${token}` };
 
       const [statsRes, usersRes] = await Promise.all([
-        fetch('http://localhost:3001/api/admin/stats', { headers }),
-        fetch('http://localhost:3001/api/admin/users', { headers }),
+        fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/admin/stats', { headers }),
+        fetch('https://ai-job-tracker-production-fd21.up.railway.app/api/admin/users', { headers }),
       ]);
 
       if (statsRes.status === 403) {
