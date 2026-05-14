@@ -58,7 +58,7 @@ export default function DashboardPage() {
     }
   };
 
-  const deleteJob = async (id) => {
+  const deleteJob = async (id: number) => {
     try {
       const token = localStorage.getItem('token');
       await fetch(`https://ai-job-tracker-production-fd21.up.railway.app/api/jobs/${id}`, {
@@ -76,7 +76,7 @@ export default function DashboardPage() {
     router.push('/login');
   };
 
-  const statusColors = {
+  const statusColors: Record<string, string> = {
     Applied: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
     Interviewing: 'bg-amber-500/10 text-amber-400 border-amber-500/20',
     Offered: 'bg-green-500/10 text-green-400 border-green-500/20',
