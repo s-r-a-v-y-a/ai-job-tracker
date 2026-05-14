@@ -7,11 +7,10 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 async function askClaude(prompt) {
   const message = await client.messages.create({
     model: 'claude-sonnet-4-5',
-    max_tokens: 1024,
+    max_tokens: 2048,
     messages: [{ role: 'user', content: prompt }],
   });
   const text = message.content[0].text;
-  // Remove markdown backticks if present
   return text.replace(/```json\n?/g, '').replace(/```\n?/g, '').trim();
 }
 // RESUME SCORER
