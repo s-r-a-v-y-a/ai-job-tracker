@@ -66,6 +66,7 @@ Deployment: Vercel (frontend), Railway (backend and database)
 ---
 
 ## Project structure
+
 ai-job-tracker/
 frontend/
 app/
