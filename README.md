@@ -67,30 +67,33 @@ Deployment: Vercel (frontend), Railway (backend and database)
 
 ## Project structure
 
+```
 ai-job-tracker/
-frontend/
-app/
-login/          Login page
-register/       Registration page
-dashboard/      Job list and add form
-kanban/         Drag and drop board
-ai/             AI tools (four tabs)
-analytics/      Charts and statistics
-search/         Job search
-admin/          Admin panel (restricted)
-backend/
-routes/
-auth.js         Register and login endpoints
-jobs.js         Job CRUD and analytics
-ai.js           AI feature endpoints
-search.js       Job search endpoint
-admin.js        Admin-only endpoints
-middleware/
-auth.js         JWT verification middleware
-lib/
-prisma.js       Database client
-prisma/
-schema.prisma   User and Job table definitions
+  frontend/
+    app/
+      login/          Login page
+      register/       Registration page
+      dashboard/      Job list and add form
+      kanban/         Drag and drop board
+      ai/             AI tools (four tabs)
+      analytics/      Charts and statistics
+      search/         Job search
+      admin/          Admin panel (restricted)
+
+  backend/
+    routes/
+      auth.js         Register and login endpoints
+      jobs.js         Job CRUD and analytics
+      ai.js           AI feature endpoints
+      search.js       Job search endpoint
+      admin.js        Admin-only endpoints
+    middleware/
+      auth.js         JWT verification middleware
+    lib/
+      prisma.js       Database client
+    prisma/
+      schema.prisma   User and Job table definitions
+```
 ---
 
 ## Running locally
